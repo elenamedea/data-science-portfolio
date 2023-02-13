@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender Homepage</title>
+    <link rel="stylesheet" href="/static/styling.css">
+</head>
+<body>
+    <h1> My Movie Website </h1>
+    <img src= "{{ url_for('static', filename='mulhollanddrive.jpg') }}", width=600>
+    <p>Welcome to the  <b>Movie Recommender</b> website!</p>
+    <p>Click <a href = '/recommendations'>here</a> to get your recommendations! :)</p>
+
+    <form action="/recommendations">
+      <p>Please rate the following movies:</p>
+      {% for entry in range(5)%}
+      <input type="text" 
+            name="title" 
+            placeholder="movie title"
+            required
+            list="movies">
+      
+      <input type="text"
+            name="rating" 
+            placeholder="0-5">
+      
+            <br><br>
+      {% endfor %}
+      <!-- <input type = "submit"> -->
+      <button>Submit</button>
+    </form>
+
+    <datalist id="movies">
+      {% for movie in movies%}
+      <option>{{movie}}</option>
+      {% endfor %}
+    </datalist>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+body {
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: blueviolet;
+    font-family: Lucida Sans;
+    font-size: 120%;
+}
+
+h1 {
+    font-family: Lucida Sans;
+    font-size: 50px;
+    text-shadow: 2px 0 15px #292929;
+    letter-spacing: 6px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+input {
+    font-family: Lucida Sans;
+    background-color: black;
+    color: whitesmoke;
+}
+
+button {
+    background-color: whitesmoke;
+    color: blueviolet;
+    font-size: 130%;
+    font-weight: bolder;
+    font-family: Lucida Sans;
+}
+
+button:hover {
+    background-color: blueviolet;
+    color: whitesmoke;
+    transform: rotate(-180deg);
+}
+
+img:hover {
+    filter: brightness(150%);
+}
+
+img {
+    width: 600px;
+}
